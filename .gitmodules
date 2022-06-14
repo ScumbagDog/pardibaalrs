@@ -1,0 +1,3 @@
+[submodule "PARDIBAAL"]
+	path = PARDIBAAL
+	url = https://github.com/DEIS-Tools/PARDIBAAL
