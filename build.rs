@@ -11,7 +11,7 @@ fn main() {
         .clang_arg("-x").clang_arg("c++")
         .opaque_type("std::.*")
         .allowlist_function(".*DBM_future") //this was apparently all that was needed to properly include all the associated methods. Don't ask me how it works, I don't know.
-        .derive_copy(true)
+        .allowlist_type("pardibaal_DBM")
 	.generate()
         .expect("Unable to generate bindings");
 

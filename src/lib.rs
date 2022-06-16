@@ -6,6 +6,7 @@ pub mod pardibaalrs {
 
     pub use bindings::pardibaal_DBM as PDBM;
     pub use bindings::pardibaal_bound_t as Bound;
+    use bindings::pardibaal_bounds_table_t;
 
     mod bindings {
         include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
@@ -83,5 +84,17 @@ pub mod pardibaalrs {
 
     pub fn new_bound(val: i32, strict: bool) -> Bound {
         unsafe { bindings::pardibaal_bound_t::new1(val, strict) }
+    }
+
+    impl Clone for pardibaal_bounds_table_t {
+        fn clone(&self) -> Self {
+            self.to_owned()
+        }
+    }
+
+    impl Clone for PDBM {
+        fn clone(&self) -> Self {
+            self.to_owned()
+        }
     }
 }
