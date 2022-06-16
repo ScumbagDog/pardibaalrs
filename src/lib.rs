@@ -80,4 +80,8 @@ pub mod pardibaalrs {
             bindings::pardibaal_DBM_shift(dbm, x, v)
         }
     }
+
+    pub fn new_bound(val: i32, strict: bool) -> Bound {
+        unsafe { bindings::pardibaal_bound_t::new1(val, strict) }
+    }
 }
