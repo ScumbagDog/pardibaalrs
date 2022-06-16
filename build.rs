@@ -24,6 +24,8 @@ fn main() {
 
     let src = [
         "PARDIBAAL/src/pardibaal/DBM.cpp",
+        "PARDIBAAL/src/pardibaal/bound_t.cpp",
+        "PARDIBAAL/src/pardibaal/bounds_table_t.cpp",
     ];
     let includes = ["PARDIBAAL/src/pardibaal",
                     "PARDIBAAL/include",
