@@ -11,7 +11,8 @@ fn main() {
         .clang_arg("-x").clang_arg("c++")
         .opaque_type("std::.*")
         .allowlist_function(".*DBM_future") //this was apparently all that was needed to properly include all the associated methods. Don't ask me how it works, I don't know.
-        .generate()
+        .derive_copy(true)
+	.generate()
         .expect("Unable to generate bindings");
 
     let out_path = PathBuf::from(env::var("OUT_DIR").unwrap());
