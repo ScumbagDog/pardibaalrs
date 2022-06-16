@@ -98,3 +98,11 @@ pub mod pardibaalrs {
         }
     }
 }
+#[cfg(test)]
+mod test {
+    use crate::pardibaalrs::*;
+    #[test]
+    fn smoke_test(){
+    let dbm: PDBM = unconstrained(10 as u32);
+    }
+}
